@@ -10,7 +10,9 @@ export default function BikeMap() {
   const [bikes, setBikes] = useState({});
   const [selectedBike, setSelectedBike] = useState(null);
   const mapRef = useRef();
-  const { isLoaded } = useJsApiLoader({ googleMapsApiKey: "AIzaSyDwvvLd4018eyClMdfbwCvoAnN0p04ni34" });
+  const { isLoaded } = useJsApiLoader({ 
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY 
+  });
 
   const handleMapLoad = (map) => {
     mapRef.current = map;
