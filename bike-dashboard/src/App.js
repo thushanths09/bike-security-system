@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import BikeMap from "./components/BikeMap";
 import AlertsList from "./components/AlertsList";
-// import BikeGeofence from './components/BikeGeofence';
+import "./App.css";
 
 function App() {
   const mapRef = useRef();
@@ -13,16 +13,21 @@ function App() {
   }, []);
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1 style={{ textAlign: "center" }}>Bike Security Dashboard</h1>
-      <BikeMap ref={mapRef} />
-      <h2>Alerts</h2>
-      <AlertsList onBikeAlert={(alert) => {
-        console.log("Alert received for", alert.bikeId);
-      }} />
-    {/* <div style={{ height: '100vh', width: '100%' }}>
-      <BikeGeofence />
-    </div> */}
+    <div className="dashboard-container">
+      <h1>Bike Security Dashboard</h1>
+
+      <div className="glass-card">
+        <BikeMap ref={mapRef} />
+      </div>
+
+      <div className="glass-card">
+        <h2>Alerts</h2>
+        <AlertsList
+          onBikeAlert={(alert) => {
+            console.log("Alert received for", alert.bikeId);
+          }}
+        />
+      </div>
     </div>
   );
 }

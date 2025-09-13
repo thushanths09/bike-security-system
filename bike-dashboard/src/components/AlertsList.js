@@ -28,7 +28,7 @@ export default function AlertsList({ onBikeAlert }) {
   }, [onBikeAlert]);
 
   return (
-    <ul style={{ maxHeight: "300px", overflowY: "auto" }}>
+    <ul style={{ maxHeight: "300px", overflowY: "auto" }} className="alerts-list">
       {alerts.map((alert, index) => (
         <li key={index} style={{ padding: "5px", borderBottom: "1px solid #ddd" }}>
           🚨 {alert.bikeId} moved {alert.distance.toFixed(2)} m (radius {alert.radius} m)

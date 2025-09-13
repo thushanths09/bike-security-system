@@ -41,6 +41,7 @@ export default function BikeMap() {
   if (!isLoaded) return <div>Loading map...</div>;
 
   return (
+    <div className="map-container">
     <GoogleMap mapContainerStyle={mapContainerStyle} center={defaultCenter} zoom={16} onLoad={handleMapLoad}>
       {Object.keys(bikes).map((id) => {
         const bike = bikes[id];
@@ -110,5 +111,6 @@ export default function BikeMap() {
         </InfoWindow>
       )}
     </GoogleMap>
+    </div>
   );
 }
