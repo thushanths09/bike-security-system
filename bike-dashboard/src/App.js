@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BikeMap from "./components/BikeMap";
 import AlertsList from "./components/AlertsList";
 import "./App.css";
