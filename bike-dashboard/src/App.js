@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import BikeMap from "./components/BikeMap";
 import AlertsList from "./components/AlertsList";
+// import BikeGeofence from './components/BikeGeofence';
 
 function App() {
   const mapRef = useRef();
@@ -19,6 +20,9 @@ function App() {
       <AlertsList onBikeAlert={(alert) => {
         console.log("Alert received for", alert.bikeId);
       }} />
+    {/* <div style={{ height: '100vh', width: '100%' }}>
+      <BikeGeofence />
+    </div> */}
     </div>
   );
 }
