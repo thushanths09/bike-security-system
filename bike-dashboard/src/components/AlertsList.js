@@ -12,8 +12,8 @@ export default function AlertsList({ onBikeAlert }) {
       setAlerts((prev) => [alert, ...prev]);
 
       // Optional: play sound
-      const audio = new Audio("/alert.mp3"); 
-      audio.play();
+      // const audio = new Audio("/alert.mp3"); 
+      // audio.play();
 
       // Browser notification
       if (Notification.permission === "granted") {
